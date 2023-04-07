@@ -1,0 +1,41 @@
+Deeper With CSS:
+
+External style sheet - A style sheet that contains CSS rules that are applied to every HTML page that links to it.
+Written as: <head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+Internal style sheet - A style sheet that applies CSS rules within individual web pages, but those rules can only be referenced by that individual HTML page. Written in the HTML, effects entire page.
+Written as: <head>
+  <style>
+    /* Internal CSS Rules go here. */
+  </style></head>
+
+Inline styles - CSS rules written alongside HTML code, thus applying the CSS rules to specific HTML elements. 
+<body>
+  <p style="color: red; font-size: 24px;">
+    Example of an inline style.
+  </p></body>
+
+Cascade - A concept that helps determine how rules will be applied based on when they appear in the code, by giving more importance to the rules that are closer in proximity to the actual content that is being styled.
+Helps when theres 2 propperties that are the same but have different values. Cascade goes with the property closest to the HTML section being edited.
+
+Pseudo-element - A functionality that lets you style a specific part of the selected HTML element, such as the first letter or line, by adding a keyword to a CSS selector
+
+Hiersrchy of importance: External>Internal>Inline - style thats applied which has more importance will override less important code thats already applied
+
+!important code is used to override existing css styles and make top priority
+Written as: color: p { color: red !important; }
+
+Classes- help style specific elements and as many times as desired. Period before class name is required but only in CSS( .class-name) 
+assigned in HTML by: <h2 class="class-name">Right Header.</h2>
+called in CSS by: .class-name{ } (pretty much replacing elemnt h2 with the class name
+
+Multiple classes for an element: <p class="color font-size">Default text..</p>
+
+Specific classes for element: p.center { text-align: center; } (efects "p" element with "center" class only)
+
+Group classes with same properties by seperating with comma: h1, h2, .green-text { color: green; font-family: Arial, sans-serif; }
+
+Nested classes/selectors/elements: main p { color: black; } (every "p" in "main is the color black)
+specific nesting: main > p { color: white; } (only the first "p" is black in "main" because its nearest)
